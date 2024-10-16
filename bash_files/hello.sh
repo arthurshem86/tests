@@ -10,24 +10,24 @@
 # e.g. Saturday. Note that the 'date' command can be used to convert a date format into a different date format.
 
 # Assigning the variables
-BIRTHDATE="Jan 1, 2002"
+BIRTHDATE="Jan 1, 2000"
 Presents=10
 BIRTHDAY=`date -d "$BIRTHDATE" +%A`
 
 #Creating the loop for the date variables
-if ["$BIRTHDATE" == "Jan 1, 2002"] ; then
+if [ "$BIRTHDATE" == "Jan 1, 2000" ] ; then
     echo "BIRTHDATE is correct, it is $BIRTHDATE"
 else
     echo "BIRTHDATE is incorrect -please retry"
 fi
 
-if [$Presents == 10] ; then
+if [ $Presents == 10 ] ; then
     echo "I have received $Presents presents"
 else
     echo "Presents is incorrect - please try again"
 fi
 
-if [$BIRTHDAY == "Saturday"] ; then
+if [ $BIRTHDAY == "Saturday" ] ; then
     echo "I was born on a $BIRTHDAY"
 else
     echo "BIRTHDAY is incorrect - please retry"
